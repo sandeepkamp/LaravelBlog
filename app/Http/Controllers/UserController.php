@@ -48,14 +48,7 @@ class UserController extends Controller
     return view('home')->withPosts($posts)->withTitle($title);
   }
 
-  public function user_posts_draft(Request $request)
-  {
-    //
-    $user = $request->user();
-    $posts = Posts::where('author_id', $user->id)->where('active', '0')->orderBy('created_at', 'desc')->paginate(5);
-    $title = $user->name;
-    return view('home')->withPosts($posts)->withTitle($title);
-  }
+  
 
   /**
    * profile for user
