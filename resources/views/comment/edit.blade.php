@@ -17,7 +17,7 @@ Edit Comment
 
   <div class="form-group">
      <div class="col-md-10">
-       <input type="text" class="form-control" value="{{ $comment->body}}" name="body">
+       <input type="text" class="form-control"  required="required" value="{{ $comment->body}}" name="body">
     </div>
   </div>
   <input type="submit" name='publish' class="btn btn-success" value="Update" />
